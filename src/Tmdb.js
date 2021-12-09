@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 const API_KEY = '4ced03bab997ff2b27c776c1a8fc77fb'
-const API_BASE = 'https://api.themoviedb.org/3'
 
 /*
 * Originais da Netflix
@@ -15,8 +14,7 @@ const API_BASE = 'https://api.themoviedb.org/3'
 */
 
 const basicFetch = async (endpoint) => {
-    const json = await axios.get(`${API_BASE}${endpoint}`)
-    console.log(json)
+    const json = await axios.get(`https://api.themoviedb.org/3${endpoint}`)
     return json.data
 }
 
