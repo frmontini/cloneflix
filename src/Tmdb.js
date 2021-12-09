@@ -16,7 +16,7 @@ const API_BASE = 'https://cafecomsite.com.br/vercel/cloneflix/?params='
 const basicFetch = async (endpoint) => {
     endpoint = encodeURIComponent(endpoint)
     const json = await axios.get(`${API_BASE}${endpoint}`)
-    return json
+    return JSON.parse(json)
 }
 
 export default {
